@@ -1,0 +1,41 @@
+/* 
+.waves {
+    background: linear-gradient(-45deg, #fcfbfb, #a7607b, #697f86, #5f8d22);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+.sliding-container
+{
+    overflow: hidden;
+}
+
+.sliding-background {
+    background-image: url('../../public/bg1.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 1032px;
+    background-repeat: repeat-x;
+    animation: slide 5s linear infinite;
+  }
+  
+  @keyframes slide{
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-115px, 0, 0);
+    }
+  }

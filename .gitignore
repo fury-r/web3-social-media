@@ -44,7 +44,7 @@ jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
-
+app
 # TypeScript cache
 *.tsbuildinfo
 
@@ -128,3 +128,24 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+./app/node_modules/
+../backend/.venv 
+./test/.next/
+./test/node_modules/
+./app
+./test/package-lock.json
+./mobileapp/leylines/.dart_tool
+./mobileapp/leylines/android
+./mobileapp/leylines/ios
+./mobileapp/leylines/build
+./mobileapp/leylines/web
+./mobileapp/leylines/windows
+./mobileapp/leylines/winuwp
+*.pyc
+backend/webapp/__pycache__/
+mobileapp
+*client_secret*
+backend/static/
+
+*venv*
+*__pycache__*

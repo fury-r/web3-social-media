@@ -1,0 +1,119 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px    100% = 16px
+    overflow-y: scroll;
+  }
+  
+
+.showreactions{
+    display: none;
+    z-index: 5;
+}
+.hoverpost::hover .showreactions{
+    display: block;
+
+  }
+  .container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #c988f8;
+    transition: background .4s ease;
+  }
+  
+  .bottom-nav {
+      background: #fff;
+      width: 48rem;
+      height: 12rem;
+      border-radius: 0 0 3rem 3rem;
+      box-shadow: 0 .4rem 1rem 0 rgba(55, 55, 55, .2);
+      padding: 1rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+  
+      input { display: none; }
+  
+      label {
+          cursor: pointer;
+          width: 5rem;
+          height: 5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #b5c4da;
+          z-index: 200;
+          position: relative;
+  
+          &::before  {
+              content: '';
+              position: absolute;
+              width: 7rem;
+              height: 7rem;
+              border-radius: 50%;
+              transform: scale(0);
+              transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+          }
+      }
+  
+      ion-icon {
+          font-size: 3.5rem;
+          color: inherit;
+      }
+  
+      input:checked + .home {
+          color: #ff90b5;
+        
+          > ion-icon:first-child {opacity: 0;}
+          &::before{ 
+              background: #ffdfea;
+              transform: scale(1);
+          }
+      }
+  
+      input:checked + .cart {
+          color: #A439F1;
+        > ion-icon:first-child {opacity: 0;}
+          &::before{ background: #d9bcee;
+              transform: scale(1);
+          }
+      }
+  
+      input:checked + .fav {
+          color: #00d1c7;
+        > ion-icon:first-child {opacity: 0;}
+          &::before{ background: #c3eeec;
+              transform: scale(1);
+          }
+      }
+  
+      input:checked + .profile {
+          color: #ffc460;
+        > ion-icon:first-child {opacity: 0;}
+          &::before{ background: #ffebc7;
+              transform: scale(1);
+          }
+      }
+  
+      input:checked + label .fill {
+          transform: scale(1);
+          opacity: 1;
+      }
+  }
+  
+  .fill {
+      position: absolute;
+      left: .8rem;
+      transform: scale(0);
+      opacity: 0;
+      transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  

@@ -1,6 +1,9 @@
+![Logo](image-9.png)
 # Web3 Social Media POC App
 
-Welcome to our Proof of Concept (POC) Web3 Social Media application! This application allows users to interact in a decentralized social media environment, leveraging blockchain technology for enhanced security and decentralization. Users can send messages, upload photos, follow other users, edit their profile details, like and comment on posts, search for users and posts, block other users, and even send non-fungible tokens (NFTs) to each other.
+Welcome to our Proof of Concept (POC) Web3 Social Media application was developed during my time as a student! This application allows users to interact in a decentralized social media environment, leveraging blockchain technology for enhanced security and decentralization. Users can send messages, upload photos, follow other users, edit their profile details, like and comment on posts, search for users and posts, block other users, and even send non-fungible tokens (NFTs) to each other.
+
+
 
 ## Features
 
@@ -13,6 +16,9 @@ Welcome to our Proof of Concept (POC) Web3 Social Media application! This applic
 - **🔍Search:** Search for other users and posts within the platform.
 - **🚫Blocking:** Block other users to prevent interactions with them.
 - **💸NFT Transactions:** Send non-fungible tokens to other users.
+
+## Architecture  
+![Architecture](image-8.png)
 
 ## Technologies Used
 
@@ -103,7 +109,26 @@ Welcome to our Proof of Concept (POC) Web3 Social Media application! This applic
 - **Cleaning Up**: If you wish to delete the virtual environment later, simply delete the `venv` directory.
 
 
+## UI 
+![Login](image.png)
+![Register](image-1.png)
+![Profile](image-2.png)
+![Notifications](image-3.png)
+![Message layout](image-4.png)
+![Direct messages list](image-5.png)
+![Notes to Self](image-6.png)
+![Options](image-7.png)
 
+### Prettier
+    ```bash
+    prettier --write "**/*.{js,jsx,json}"
+    ```
+
+### Eslint
+```bash
+npx eslint .
+
+```
 ## Contributing
 
 I  welcome contributions from the community to improve and extend the functionality of our Web3 Social Media application. If you'd like to contribute, please fork the repository, make your changes, and submit a pull request. I  appreciate your contributions!

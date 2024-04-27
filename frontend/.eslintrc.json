@@ -1,0 +1,26 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "ignorePatterns": ["node_modules", "*.config.*"],
+
+  "rules": {
+    "no-unused-vars": "warn",
+    "react/prop-types": "off" // Disable the react/prop-types rule
+  },
+  "overrides": [
+    {
+      "files": ["./src/**/*"]
+    }
+  ]
+}

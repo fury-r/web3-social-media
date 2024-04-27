@@ -1,5 +1,8 @@
+// eslint-disable-next-line
+
 import axios from 'axios'
 
+// eslint-disable-next-line no-undef
 const url = typeof window !== 'undefined' ? process.env.BASE_URL : null
 const axiosInstance = axios.create({
   baseURL: url || 'http://127.0.0.1:8080'

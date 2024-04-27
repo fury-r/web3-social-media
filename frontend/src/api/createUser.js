@@ -1,7 +1,6 @@
-import React from 'react'
-
 const createUser = (req, res) => {
   try {
+    // eslint-disable-next-line no-unused-vars
     const userDoc = {
       _type: 'users',
       _id: req.body.walletAddress,

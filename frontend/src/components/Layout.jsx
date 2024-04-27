@@ -10,9 +10,9 @@ import OtpView from '../pages/otpview/otpview'
 import ForgotPassword from '../pages/forgotpassword/forgotpassword'
 import { useAuth } from '../context/authContext'
 
+// eslint-disable-next-line react/prop-types
 const Layout = ({ children }) => {
   const router = useRouter()
-  const { }=useAuth()
   const [showHeader, setshowheader] = useState(
     !router.pathname.includes('/private') ? false : true
   )

@@ -104,7 +104,7 @@ const Login = () => {
                 Leylines
               </a> */}
 
-              <img src='logo.png' className='w-1/5'></img>
+              <img src='../logo.png' className='w-1/5'></img>
               <h1 className=' text-4xl font-bold mt-auto mb-auto'>LeyLines</h1>
             </div>
             <Toaster />
@@ -192,7 +192,7 @@ const Login = () => {
                 </button>
               </div>
               <div className='mt-10 flex flex-row  justify-center text-2xl'>
-                Don't have an Account?
+                Don`&apos;`t have an Account?
                 <Button
                   className={'  ml-5 text-sky-400'}
                   onClick={() => Router.push('/registeration/registeration')}

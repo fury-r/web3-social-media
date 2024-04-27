@@ -1,4 +1,4 @@
-import React from 'react'
+// eslint-disable-next-line
 const styles = {
   body: {
     wrapper: `flex justify-center h-screen w-screen select-none bg-[#ffff] text-white m-2  h-full `,

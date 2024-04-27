@@ -1,4 +1,8 @@
+// eslint-disable-next-line
+
+// eslint-disable-next-line no-undef
 export const contractAddress = process.env.CONTRACT_ADDRESS
+// eslint-disable-next-line
 
 export const contractABI = [
   {

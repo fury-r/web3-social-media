@@ -1,5 +1,7 @@
+// eslint-disable-next-line
 import axios from '../api/axios'
 import { useRouter } from 'next/router'
+import React from 'react'
 export function authenticateRoute(Component) {
   const Router = useRouter()
   return function authenticateRoute(props) {

@@ -108,9 +108,6 @@ Welcome to our Proof of Concept (POC) Web3 Social Media application! This applic
 
 I  welcome contributions from the community to improve and extend the functionality of our Web3 Social Media application. If you'd like to contribute, please fork the repository, make your changes, and submit a pull request. I  appreciate your contributions!
 
-## License
-
-This project is licensed under the [MIT License](LICENSE), which means you are free to use, modify, and distribute the code as per the terms of the license.
 
 ## Acknowledgements
 

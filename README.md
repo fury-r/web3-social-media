@@ -8,10 +8,10 @@ Welcome to our Proof of Concept (POC) Web3 Social Media application was develope
 ## Features
 
 
-- ** 📨 Messaging:** Users can send messages to each other securely using blockchain technology.
-- ** 📸 Photo Upload:** Upload photos to share with your followers.
-- ** 👥Follow/Unfollow:** Follow other users to keep up with their posts.
-- ** ✏️Profile Editing:** Edit your profile details such as bio, profile picture, etc.
+- **📨 Messaging:** Users can send messages to each other securely using blockchain technology.
+- **📸 Photo Upload:** Upload photos to share with your followers.
+- **👥Follow/Unfollow:** Follow other users to keep up with their posts.
+- **✏️Profile Editing:** Edit your profile details such as bio, profile picture, etc.
 - **❤️Like and Comment:** Interact with posts by liking and commenting on them.
 - **🔍Search:** Search for other users and posts within the platform.
 - **🚫Blocking:** Block other users to prevent interactions with them.

@@ -138,19 +138,19 @@ def login():
     print(data)
     form = LoginForm(data=data, csrf_enabled=False)
     if not form.validate():
-        form.errors, 402
+        form.errors, 401
     print(data['email'], data['password'])
     get_data = db.users.find_one({'email': data['email']})
     if not  get_data:
         return {
             'validate': 'Invalid Credentials'
-        }, 402
+        }, 401
     if not check_has_value(data['password'],get_data['password']):
         db.users.update_one({"email":data['email']},{'$set':{'attempts':get_data['attempts']+1}})
         
         return {
             'validate': 'Invalid Credentials'
-        }, 402
+        }, 401
 
     otp,msg=generateOtp()
 

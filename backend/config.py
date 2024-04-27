@@ -12,6 +12,7 @@ app.config['JWT_BLACKLIST_TOKEN_CHECKS'] = ['access', 'refresh']
 app.config['JWT_COOKOE_SECURE']=False
 app.config['UPLOAD_EXTENSIONS'] = ['jpg', 'png', 'gif','jpeg']
 app.config['UPLOAD_FOLDER'] =os.path.join(os.path.dirname(app.instance_path), 'static')
+app.config['WTF_CSRF_ENABLED'] = False
 
 app.config['JWT_TOKEN_LOCATION']=['headers']
 app.config['JWT_SESSION_COOKIE']=False

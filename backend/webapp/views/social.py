@@ -157,18 +157,23 @@ def get_image(img):
 
 
 def get_friends(user_id):
-    followers = db.connections.distinct(
-        {'user_1'}, {'$or': [{'user_1': user_id}, {'user_2': user_id}]},)
-    followers = db.users.find({'_id': {'$in': list(followers)}}, {
-                              'id': {'$toString': '$_id'}, 'username': 1, '_id': 0, 'profile_picture': 1})
     data = []
-    for row in list(followers):
-        row["profile_pic"] = False
-        if len(row['profile_picture']) > 0:
-            row.update(get_image(row['profile_picture']))
-        data.append(row)
+    try:
+        followers = db.connections.distinct(
+            'user_1', {'$or': [{'user_1': user_id}, {'user_2': user_id}]},)
+        print(followers)
+        followers = db.users.find({'_id': {'$in': list(followers)}}, {
+                                'id': {'$toString': '$_id'}, 'username': 1, '_id': 0, 'profile_picture': 1})
+        for row in list(followers):
+            row["profile_pic"] = False
+            if len(row['profile_picture']) > 0:
+                row.update(get_image(row['profile_picture']))
+            data.append(row)
 
-    return {'data': data}
+        return {'data': data}
+    except Exception as e:
+        print(e)
+        return {'data':[]}
 
 
 def getTimedifference(created_at):

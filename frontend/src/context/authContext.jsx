@@ -1,5 +1,5 @@
 import Router from 'next/router'
-import React, { createContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 import { useMoralis } from 'react-moralis'
 import axios from '../api/axios'
 
@@ -57,3 +57,5 @@ export const AuthProvider = ({ children }) => {
   }
   return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>
 }
+
+export const useAuth = () => useContext(AuthContext)

@@ -37,6 +37,13 @@ Welcome to our Proof of Concept (POC) Web3 Social Media application! This applic
     ```bash
     npm install
     ```
+    or
+    ```bash
+    npm install --legacy-peer-deps
+    ```
+    ```bash
+    npm install --legacy-peer-deps sass
+    ```
 4. **Set Environment Variables**:
     - Check if there's an `.env.example` file provided. If yes, duplicate it and rename the copy to `.env`. Fill in the required environment variables such as API endpoints, etc.
     - If there's no `.env.example` file, check the documentation or ask the team for the required environment variables.

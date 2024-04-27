@@ -8,15 +8,16 @@ import axios from '../api/axios'
 import Registeration from '../pages/registeration/registeration'
 import OtpView from '../pages/otpview/otpview'
 import ForgotPassword from '../pages/forgotpassword/forgotpassword'
+import { useAuth } from '../context/authContext'
 
 const Layout = ({ children }) => {
   const router = useRouter()
+  const { }=useAuth()
   const [showHeader, setshowheader] = useState(
     !router.pathname.includes('/private') ? false : true
   )
   const [auth, setAuth] = useState(true)
   useEffect(() => {
-    console.log(showHeader)
     axios
       .get('/v1/authenticate')
       .then((res) => {
@@ -30,11 +31,20 @@ const Layout = ({ children }) => {
         setAuth(false)
         setshowheader(false)
       })
-  })
+      let interval;
+      if(localStorage.getItem('token')){
+        interval= setInterval(() => {
+          handleOnline()
+        }, 15000)
+      }
+      return()=>{
+        if(interval){
+          clearInterval(interval)
+        }
+      }
+  },[])
 
-  setTimeout(() => {
-    handleOnline()
-  }, 15000)
+
 
   const handleOnline = () => {
     if (auth) {

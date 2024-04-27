@@ -1,19 +1,19 @@
 import axios from 'axios'
 
-const url = process.env.BASE_URL
-
+const url = typeof window !== 'undefined' ? process.env.BASE_URL : null
 const axiosInstance = axios.create({
-  baseURL: url
+  baseURL: url || 'http://127.0.0.1:8080'
 })
 axiosInstance.interceptors.request.use(async (config) => {
   if (['post', 'get', 'put', 'delete'].includes(config.method)) {
     try {
-      let token = await localStorage.getItem('token')
-      console.log(token)
+      let token =
+        typeof window !== 'undefined' ? localStorage.getItem('token') : null
+
       config.headers['Authorization'] = `Bearer ${token}`
       config.headers['Access-Control-Allow-Origin'] = '*'
     } catch (e) {
-      console.log(e)
+      console.error(e)
     }
     return config
   }

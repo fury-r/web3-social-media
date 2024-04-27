@@ -25,8 +25,8 @@ def smtp(msg,recv):
     print("message sent to",recv)
     s.quit() 
 def send_message(to,sub,body):
-    api_key = os.get("api_key")
-    api_secret = os.get("api_secret")
+    api_key = os.getenv("api_key")
+    api_secret = os.getenv("api_secret")
     mailjet = Client(auth=(api_key, api_secret), version='v3.1')
     data = {
     'Messages': [

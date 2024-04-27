@@ -56,7 +56,7 @@ const Chat = () => {
   return (
     <div className='flex  flex-1 flex-col   bg-sky-100 h-screen'>
       <Toaster />
-      <div className='mx-5 mt-1 flex flex-col'>
+      <div className='mx-5 mt-1 flex flex-col h-full'>
         <div className='m-2 flex  flex-col'>
           <div className='flex flex-row justify-center mt-4  '>
             <div className='flex flex-row items-center w-5/6 shadow-md rounded-3xl bg-white  border-grey px-3'>
@@ -193,7 +193,7 @@ const Chat = () => {
             </button>
           ))
         ) : search.length == 0 ? (
-          <div className=' flex-col justify-center border-2 border-red-500 '>
+          <div className=' flex-col justify-center   self-center content-center h-[100%] overflow-hidden '>
             <label>No open conversations</label>
           </div>
         ) : (

@@ -23,7 +23,7 @@
 }
 
 .sliding-background {
-    background-image: url('../../public/bg1.jpg');
+    background-image: url('../../../public/bg1.jpg');
     background-size: cover;
     height: 100%;
     width: 1032px;

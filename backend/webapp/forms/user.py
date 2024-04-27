@@ -38,7 +38,7 @@ def password_check(form,field):
     password=field.data
     # if len(password)<8:
     #     error.append('Password should have more then 8 characters.')
-    pattern='[A-Z]+[a-z]'
+    pattern='[A-Z]'
     if re.search(pattern, password)==None:
         error.append('Password Should Contain an uppercase character.')
 

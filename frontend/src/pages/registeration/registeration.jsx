@@ -200,7 +200,7 @@ const Registeration = () => {
                 onClick={signUpWithMeta}
                 className={'  bg-orange-600  ' + styles.button}
               >
-                Connect MetaMask
+                Connect Wallet
               </button>
             </div>
             {/* <Form.Group className="d-flex  justify-center">

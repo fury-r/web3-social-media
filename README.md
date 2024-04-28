@@ -120,14 +120,15 @@ Welcome to our Proof of Concept (POC) Web3 Social Media application was develope
 ![Options](image-7.png)
 
 ### Prettier
-    ```bash
-    prettier --write "**/*.{js,jsx,json}"
-    ```
+
+```bash
+ prettier --write "**/*.{js,jsx,json}"
+```
 
 ### Eslint
-```bash
-npx eslint .
 
+```bash
+    npx eslint .
 ```
 ## Contributing
 
